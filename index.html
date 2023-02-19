@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>GoSurf</title>
+</head>
+<body>
+    <div class="page__container">
+        <header class="header">
+            <div class="toolbar d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="./image/Logo.png" alt="">
+                </div>
+                <div class="burger__menu d-flex flex-column align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#header__offCanvas" aria-controls="header__offCanvas">
+                    <div class="burger__menu--layers rounded-pill layerOne"></div>
+                    <div class="burger__menu--layers rounded-pill layerTwo"></div>
+                    <div class="burger__menu--layers rounded-pill layerThree"></div>
+                </div>
+                <div class="header__nav__container d-none">
+                    <div class="navigation__bar">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        surf
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        travel
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        sleep
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        shop
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="search__button">
+                        <button></button>
+                    </div>
+                    <div class="date__container">
+                        <span class="current__day"></span>
+                        <span class="current__month"></span>
+                        <span class="current__year"></span>
+                    </div>
+                    <div class="location">
+                        <span class="icon"></span>
+                        <span class="name"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="go__surf__hide__message">go <br/> surf</div>
+        </header>
+    </div>
+    <div class="header__offcanvas offcanvas offcanvas-start show" id="header__offCanvas" data-bs-backdrop="static" tabindex="-1">
+        <div class="offcanvas-header">
+            <div class="logo">
+                <img src="./image/Logo.png" alt="">
+            </div>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-around">
+            <div class="navigation__bar">
+                <nav>
+                    <ul class="d-flex flex-wrap justify-content-between">
+                        <li>
+                            <div class="link__logo surf_and_board">
+
+                            </div>
+                            <a href="#">
+                                surf
+                            </a>
+                        </li>
+                        <li>
+                            <div class="link__logo travel_cabin"></div>
+                            <a href="#">
+                                travel
+                            </a>
+                        </li>
+                        <li>
+                            <div class="link__logo travel_camp">
+ 
+                            </div>
+                            <a href="#">
+                                sleep
+                            </a>
+                        </li>
+                        <li>
+                            <div class="link__logo surf_board"></div>
+                            <a href="#">
+                                shop
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search__button">
+                <button></button>
+            </div>
+            <div class="date__container">
+                <span class="current__day"></span>
+                <span class="current__month"></span>
+                <span class="current__year"></span>
+            </div>
+            <div class="location">
+                <span class="icon"></span>
+                <span class="name"></span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
