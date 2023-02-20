@@ -1,20 +1,32 @@
+$image_size: 168px;
+
 .header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0)), url("../image/Surf_The_Wave.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .toolbar{
     width: 100%;
     padding: 3vh 3vw;
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    @include breakpoints-up("md"){
+        padding: 0;
+        width: $image_size;
+        border-right: 1px solid #979797;
+    }
 }
 
 .logo{
     img{
         width: 15vw;
+        max-width: $image_size;
     }
 }
 
@@ -22,6 +34,7 @@
     width: 15vw;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
+    max-width: 60px;
     border: 2px solid #ffffff;
     margin-bottom: 23px;
     gap: 15%;
@@ -75,18 +88,77 @@
     }
 }
 
-.surf_and_board{
-    background: url("../image/surf_and_board_logo.svg");
+.header__nav__container{
+    width: 100%;
+    height: 100%;
 }
 
-.travel_cabin{
-    background: url("../image/travel_cabin_logo.svg");
+.navigation__bar{
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    a{
+        font-size: 1.1rem;
+        font-family: $font-name-firaSans;
+        color: #ffffff;
+    }
 }
 
-.travel_camp{
-    background: url("../image/camp_fire_logo.svg");
+.link__logo{
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
 }
 
-.surf_board{
-    background: url("../image/surf_board_logo.svg");
+.search__button{
+    all: unset;
+    margin-top: 25px;
+}
+
+.date__container{
+    margin-top: 35px;
+    color: #ffffff;
+    font-family: $font-name-firaSans;
+    margin-bottom: 45px;
+    .current__day{
+        font-size: 64px;
+        font-weight: 900;
+    }
+    .current__month, .current__year{
+        font-weight: 200;
+        font-size: 16px;
+    }
+}
+
+.location{
+    font-size: 16px;
+    font-family: $font-name-firaSans;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 45px;
+    span{
+        display: inline-block;
+    }
+    .name{
+        margin-left: 5px;
+    }
+    .icon{
+        translate: 0 -2px;
+    }
+}
+
+.go__surf__hide__message{
+    font-size: 200px;
+    line-height: 156px;
+    font-family: $font-name-firaSans;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    font-weight: 900;
 }

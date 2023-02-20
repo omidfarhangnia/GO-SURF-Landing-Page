@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,26 +55,39 @@ table {
 
 .header {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0)), url("../image/Surf_The_Wave.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .toolbar {
   width: 100%;
   padding: 3vh 3vw;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .toolbar {
+    padding: 0;
+    width: 168px;
+    border-right: 1px solid #979797;
+  }
 }
 
 .logo img {
   width: 15vw;
+  max-width: 168px;
 }
 
 .burger__menu {
   width: 15vw;
   aspect-ratio: 1/1;
   border-radius: 20%;
+  max-width: 60px;
   border: 2px solid #ffffff;
   margin-bottom: 23px;
   gap: 15%;
@@ -124,18 +138,75 @@ table {
   background: red;
 }
 
-.surf_and_board {
-  background: url("../image/surf_and_board_logo.svg");
+.header__nav__container {
+  width: 100%;
+  height: 100%;
 }
 
-.travel_cabin {
-  background: url("../image/travel_cabin_logo.svg");
+.navigation__bar .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.navigation__bar a {
+  font-size: 1.1rem;
+  font-family: "Fira Sans";
+  color: #ffffff;
 }
 
-.travel_camp {
-  background: url("../image/camp_fire_logo.svg");
+.link__logo {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
 }
 
-.surf_board {
-  background: url("../image/surf_board_logo.svg");
+.search__button {
+  all: unset;
+  margin-top: 25px;
+}
+
+.date__container {
+  margin-top: 35px;
+  color: #ffffff;
+  font-family: "Fira Sans";
+  margin-bottom: 45px;
+}
+.date__container .current__day {
+  font-size: 64px;
+  font-weight: 900;
+}
+.date__container .current__month, .date__container .current__year {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.location {
+  font-size: 16px;
+  font-family: "Fira Sans";
+  font-weight: 200;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+.location span {
+  display: inline-block;
+}
+.location .name {
+  margin-left: 5px;
+}
+.location .icon {
+  translate: 0 -2px;
+}
+
+.go__surf__hide__message {
+  font-size: 200px;
+  line-height: 156px;
+  font-family: "Fira Sans";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  font-weight: 900;
 }
