@@ -181,7 +181,7 @@ $image_size: 168px;
     min-width: 500px;
 }
 
-.control__container{
+.controller__container{
     position: absolute;
     top: 0;
     right: 5vw;
@@ -193,7 +193,6 @@ $image_size: 168px;
         position: relative;
         width: 40px;
         opacity: 1;
-
         svg{
             width: 30px;
             height: 30px;
@@ -217,23 +216,22 @@ $image_size: 168px;
         align-items: center;
         gap: 20px;
         margin: 0 5vw 5vh 15vw;
-        button[class *= "indictors__dir"]{
+        button{
             width: 17%;
             height: 100%;
             margin: 0;
             text-indent: 0;
-            opacity: 1;
-            background: transparent;
+            *{
+                color: #000000;
+            }
+            background: rgb(0,0,0);
+            background: linear-gradient(0deg, rgba(0,0,0,0) 89%, rgba(255,255,255,1) 90%);
             border: none;
             display: flex;
             flex-wrap: wrap;
+            padding: 15px 0 0 0;
             gap: 20px;
             justify-content: space-between;
-        }
-        .indictors__line{
-            width: 100%;
-            height: 3px;
-            background-color: #ffffff;
         }
         .indictors__num{
             font-family: $font-name-firaSans;
@@ -248,5 +246,14 @@ $image_size: 168px;
             font-weight: 300;
             margin-top: 5px;
         }
+    }
+}
+
+.header__carousel__inner{
+    .carousel-item{
+        width: 100%;
+        height: 100vh;
+        padding: 10vh 20vw;
+        background: #d3d3d33a;
     }
 }
