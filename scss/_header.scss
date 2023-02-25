@@ -24,6 +24,9 @@ $image_size: 168px;
     img{
         width: 15vw;
         max-width: $image_size;
+        @include breakpoints-up("md") {
+            width: auto;
+        }
     }
 }
 
@@ -211,7 +214,10 @@ $image_size: 168px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
+    @include breakpoints-up("md") {
+        height: 1015.220px;
+    }
     .carousel-indicators{
         width: 60%;
         justify-content: space-between;
@@ -221,7 +227,7 @@ $image_size: 168px;
             align-items: center;
             gap: 20px;
             width: 70%;
-            margin-left: auto;
+            margin-right: 10vw;
         }
         button{
             width: 17%;
@@ -279,9 +285,7 @@ $image_size: 168px;
         direction: rtl;
     }
     .surf__title{
-    }
-    .condition__title{
-
+        margin-top: 20vh;
     }
     .surf__title--header, .condition__title--header{
         font-size: 17px;
@@ -293,6 +297,9 @@ $image_size: 168px;
         position: relative;
         display: inline-block;
         @include breakpoints-up("md") {
+            font-size: 24px;
+        }
+        @include breakpoints-up("lg") {
             font-size: 32px;
         }
         &::after{
@@ -303,6 +310,10 @@ $image_size: 168px;
             background: #979797;
             top: calc(50% - 2px);
             left: -80px;
+            @include breakpoints-up("lg") {
+                width: 90px;
+                left: -110px;
+            }
         }
     }
     .surf__title--areaName, .condition__title--name{
@@ -312,19 +323,16 @@ $image_size: 168px;
         font-weight: 900;
         margin-right: 10vw;
         margin-bottom: 15px;
-        @include breakpoints-up("md") {
-            font-size: 32px;
+        @include breakpoints-up("lg") {
+            font-size: 80px;
         }
     }
     .condition__title--name{
         font-size: 25px;
+        @include breakpoints-up("lg") {
+            font-size: 40px;
+        }
     }
-    // .condition__title--header{
-
-    // }
-    // .condition__title--name{
-
-    // }
     .map__svg{
         width: 50%;
         height: 50%;

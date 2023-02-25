@@ -79,6 +79,11 @@ table {
   width: 15vw;
   max-width: 168px;
 }
+@media (min-width: 768px) {
+  .logo img {
+    width: auto;
+  }
+}
 
 .burger__menu {
   width: 15vw;
@@ -259,7 +264,12 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  .header__carousel {
+    height: 1015.22px;
+  }
 }
 .header__carousel .carousel-indicators {
   width: 60%;
@@ -272,7 +282,7 @@ table {
     align-items: center;
     gap: 20px;
     width: 70%;
-    margin-left: auto;
+    margin-right: 10vw;
   }
 }
 .header__carousel .carousel-indicators button {
@@ -333,6 +343,9 @@ table {
   height: 100vh;
   direction: rtl;
 }
+.header__carousel__inner .surf__title {
+  margin-top: 20vh;
+}
 .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
   font-size: 17px;
   letter-spacing: 4px;
@@ -344,6 +357,11 @@ table {
   display: inline-block;
 }
 @media (min-width: 768px) {
+  .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
   .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
     font-size: 32px;
   }
@@ -357,6 +375,12 @@ table {
   top: calc(50% - 2px);
   left: -80px;
 }
+@media (min-width: 992px) {
+  .header__carousel__inner .surf__title--header::after, .header__carousel__inner .condition__title--header::after {
+    width: 90px;
+    left: -110px;
+  }
+}
 .header__carousel__inner .surf__title--areaName, .header__carousel__inner .condition__title--name {
   font-size: 40px;
   color: #ffffff;
@@ -365,13 +389,18 @@ table {
   margin-right: 10vw;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header__carousel__inner .surf__title--areaName, .header__carousel__inner .condition__title--name {
-    font-size: 32px;
+    font-size: 80px;
   }
 }
 .header__carousel__inner .condition__title--name {
   font-size: 25px;
+}
+@media (min-width: 992px) {
+  .header__carousel__inner .condition__title--name {
+    font-size: 40px;
+  }
 }
 .header__carousel__inner .map__svg {
   width: 50%;
