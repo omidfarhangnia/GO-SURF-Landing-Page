@@ -1,0 +1,54 @@
+.current__location{
+    background-image: url("../image/surf-background-image.png");
+    background-color: #222532;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20vh;
+}
+
+.world__map__svg{
+    width: 100%;
+    padding-right: 5vh;
+}
+
+.data{
+    padding: 10vh 0 0 15vw;
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.surf__header, #location__name{
+    @include headerSize1();
+}
+
+#location__name{
+    font-size: 25px;
+    @include breakpoints-up("lg") {
+        font-size: 50px;
+    }
+    align-self: flex-end;
+}
+
+.current__location--header{
+    @include titleStyle();
+    align-self: flex-end;
+    margin-bottom: 20px;
+    // 
+}
+
+.surf__header__shadow{
+    @include headersShadow(200px, 13vh, -4vw);
+} 
+
+.centre__for__location{
+    position: absolute;
+    top: 60%;
+    right: -6%;
+    rotate: -90deg;
+    font-family: $font-name-firaSans;
+    letter-spacing: 10px;
+    color: #ffffff;
+    opacity: .5;
+}

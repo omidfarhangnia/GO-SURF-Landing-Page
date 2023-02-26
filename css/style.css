@@ -70,14 +70,14 @@ table {
 @media (min-width: 768px) {
   .toolbar {
     padding: 0;
-    width: 168px;
+    width: 169px;
     border-right: 1px solid #979797;
   }
 }
 
 .logo img {
   width: 15vw;
-  max-width: 168px;
+  max-width: 169px;
 }
 @media (min-width: 768px) {
   .logo img {
@@ -217,8 +217,9 @@ table {
   translate: 0 -2px;
 }
 
-.go__surf__hide__message {
+.go__surf__shadow {
   font-size: 200px;
+  z-index: 2;
   line-height: 156px;
   font-family: "Fira Sans";
   position: absolute;
@@ -227,6 +228,7 @@ table {
   color: rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
   font-weight: 900;
+  user-select: none;
 }
 
 .controller__container {
@@ -355,6 +357,7 @@ table {
   margin-bottom: 5px;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
@@ -363,7 +366,7 @@ table {
 }
 @media (min-width: 992px) {
   .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .header__carousel__inner .surf__title--header::after, .header__carousel__inner .condition__title--header::after {
@@ -388,6 +391,7 @@ table {
   font-weight: 900;
   margin-right: 10vw;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 @media (min-width: 992px) {
   .header__carousel__inner .surf__title--areaName, .header__carousel__inner .condition__title--name {
@@ -406,4 +410,114 @@ table {
   width: 50%;
   height: 50%;
   min-width: 500px;
+}
+
+.current__location {
+  background-image: url("../image/surf-background-image.png");
+  background-color: #222532;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20vh;
+}
+
+.world__map__svg {
+  width: 100%;
+  padding-right: 5vh;
+}
+
+.data {
+  padding: 10vh 0 0 15vw;
+  margin-bottom: 7vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.surf__header, #location__name {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Fira Sans";
+  font-weight: 900;
+  margin-right: 10vw;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .surf__header, #location__name {
+    font-size: 80px;
+  }
+}
+
+#location__name {
+  font-size: 25px;
+  align-self: flex-end;
+}
+@media (min-width: 992px) {
+  #location__name {
+    font-size: 50px;
+  }
+}
+
+.current__location--header {
+  font-size: 17px;
+  letter-spacing: 4px;
+  color: #979797;
+  font-family: "Fira Sans";
+  margin-right: 10vw;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .current__location--header {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .current__location--header {
+    font-size: 30px;
+  }
+}
+.current__location--header::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: #979797;
+  top: calc(50% - 2px);
+  left: -80px;
+}
+@media (min-width: 992px) {
+  .current__location--header::after {
+    width: 90px;
+    left: -110px;
+  }
+}
+
+.surf__header__shadow {
+  font-size: 200px;
+  z-index: 2;
+  line-height: 156px;
+  font-family: "Fira Sans";
+  position: absolute;
+  top: 13vh;
+  left: -4vw;
+  color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  font-weight: 900;
+  user-select: none;
+}
+
+.centre__for__location {
+  position: absolute;
+  top: 60%;
+  right: -6%;
+  rotate: -90deg;
+  font-family: "Fira Sans";
+  letter-spacing: 10px;
+  color: #ffffff;
+  opacity: 0.5;
 }

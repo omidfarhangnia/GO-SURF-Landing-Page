@@ -64,3 +64,80 @@ $breakpoints-down: ("sm": "575px", "md": "767px", "lg": "991px", "xl": "1199px",
         @content;
     }
 }
+
+@mixin headerSize1() {
+	font-size: 40px;
+	color: #ffffff;
+	font-family: $font-name-firaSans;
+	font-weight: 900;
+	margin-right: 10vw;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	@include breakpoints-up("lg") {
+		font-size: 80px;
+	}
+}
+
+
+@mixin headerSize2() {
+	font-size: 17px;
+	letter-spacing: 4px;
+	color: #979797;
+	font-family: $font-name-firaSans;
+	margin-right: 10vw;
+	margin-bottom: 5px;
+	position: relative;
+	display: inline-block;
+	@include breakpoints-up("md") {
+		font-size: 24px;
+	}
+	@include breakpoints-up("lg") {
+		font-size: 32px;
+	}
+}
+
+@mixin titleStyle() {
+	font-size: 17px;
+	letter-spacing: 4px;
+	color: #979797;
+	font-family: $font-name-firaSans;
+	margin-right: 10vw;
+	margin-bottom: 5px;
+	position: relative;
+	display: inline-block;
+	@include breakpoints-up("md") {
+		font-size: 24px;
+	}
+	@include breakpoints-up("lg") {
+		font-size: 30px;
+	}
+	text-transform: uppercase;
+	&::after{
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 2px;
+		background: #979797;
+		top: calc(50% - 2px);
+		left: -80px;
+		@include breakpoints-up("lg") {
+			width: 90px;
+			left: -110px;
+		}
+	}
+}
+
+
+@mixin headersShadow($fontSize, $top: 0, $left: 0) {
+	font-size: $fontSize;
+	z-index: 2;
+    line-height: 156px;
+    font-family: $font-name-firaSans;
+    position: absolute;
+    top: $top;
+    left: $left;
+    color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    font-weight: 900;
+	user-select: none;
+}

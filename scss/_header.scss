@@ -1,4 +1,4 @@
-$image_size: 168px;
+$image_size: 169px;
 
 .header{
     width: 100%;
@@ -167,16 +167,8 @@ $image_size: 168px;
     }
 }
 
-.go__surf__hide__message{
-    font-size: 200px;
-    line-height: 156px;
-    font-family: $font-name-firaSans;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(255, 255, 255, 0.1);
-    text-transform: uppercase;
-    font-weight: 900;
+.go__surf__shadow{ 
+    @include headersShadow(200px);
 }
 
 .controller__container{
@@ -288,44 +280,10 @@ $image_size: 168px;
         margin-top: 20vh;
     }
     .surf__title--header, .condition__title--header{
-        font-size: 17px;
-        letter-spacing: 4px;
-        color: #979797;
-        font-family: $font-name-firaSans;
-        margin-right: 10vw;
-        margin-bottom: 5px;
-        position: relative;
-        display: inline-block;
-        @include breakpoints-up("md") {
-            font-size: 24px;
-        }
-        @include breakpoints-up("lg") {
-            font-size: 32px;
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 2px;
-            background: #979797;
-            top: calc(50% - 2px);
-            left: -80px;
-            @include breakpoints-up("lg") {
-                width: 90px;
-                left: -110px;
-            }
-        }
+        @include titleStyle();
     }
     .surf__title--areaName, .condition__title--name{
-        font-size: 40px;
-        color: #ffffff;
-        font-family: $font-name-firaSans;
-        font-weight: 900;
-        margin-right: 10vw;
-        margin-bottom: 15px;
-        @include breakpoints-up("lg") {
-            font-size: 80px;
-        }
+        @include headerSize1();
     }
     .condition__title--name{
         font-size: 25px;
