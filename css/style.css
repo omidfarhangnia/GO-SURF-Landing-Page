@@ -346,7 +346,17 @@ table {
   direction: rtl;
 }
 .header__carousel__inner .surf__title {
-  margin-top: 20vh;
+  margin-top: 4vh;
+}
+@media (min-width: 768px) {
+  .header__carousel__inner .surf__title {
+    margin-top: 10vh;
+  }
+}
+@media (min-width: 992px) {
+  .header__carousel__inner .surf__title {
+    margin-top: 20vh;
+  }
 }
 .header__carousel__inner .surf__title--header, .header__carousel__inner .condition__title--header {
   font-size: 17px;
@@ -417,20 +427,30 @@ table {
   background-color: #222532;
   width: 100%;
   position: relative;
-  padding-bottom: 20vh;
+}
+@media (min-width: 992px) {
+  .current__location {
+    padding-bottom: 20vh;
+  }
 }
 
 .world__map__svg {
   width: 100%;
-  padding-right: 5vh;
+  height: 100%;
+  margin: 5vh 0;
 }
 
 .data {
-  padding: 10vh 0 0 15vw;
-  margin-bottom: 7vh;
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .data {
+    padding: 10vh 0 0 15vw;
+    margin-bottom: 7vh;
+  }
 }
 
 .surf__header, #location__name {
@@ -445,6 +465,32 @@ table {
 @media (min-width: 992px) {
   .surf__header, #location__name {
     font-size: 80px;
+  }
+}
+
+.surf__header {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  align-self: center;
+  margin: 4vh 0;
+}
+@media (min-width: 768px) {
+  .surf__header {
+    align-self: flex-start;
+  }
+}
+.surf__header::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  right: 0;
+  background: rgb(74, 246, 205);
+}
+@media (min-width: 992px) {
+  .surf__header::after {
+    width: 80px;
   }
 }
 
@@ -512,12 +558,26 @@ table {
 }
 
 .centre__for__location {
-  position: absolute;
-  top: 60%;
-  right: -6%;
-  rotate: -90deg;
   font-family: "Fira Sans";
-  letter-spacing: 10px;
   color: #ffffff;
   opacity: 0.5;
+  align-self: center;
+  margin: 3vh 0;
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+@media (min-width: 768px) {
+  .centre__for__location {
+    align-self: flex-start;
+    font-size: 18px;
+    letter-spacing: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .centre__for__location {
+    position: absolute;
+    top: 60%;
+    right: -6%;
+    rotate: -90deg;
+  }
 }

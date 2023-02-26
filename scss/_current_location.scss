@@ -3,24 +3,52 @@
     background-color: #222532;
     width: 100%;
     position: relative;
-    padding-bottom: 20vh;
+    @include breakpoints-up("lg"){
+        padding-bottom: 20vh;
+    }
 }
 
 .world__map__svg{
     width: 100%;
-    padding-right: 5vh;
+    height: 100%;
+    margin: 5vh 0;
 }
 
 .data{
-    padding: 10vh 0 0 15vw;
-    margin-bottom: 7vh;
     display: flex;
+    align-items: flex-end;
     flex-direction: column;
     color: #ffffff;
+    @include breakpoints-up("md") {
+        padding: 10vh 0 0 15vw;
+        margin-bottom: 7vh;
+    }
 }
 
 .surf__header, #location__name{
     @include headerSize1();
+}
+
+.surf__header{
+    display: inline-block;
+    width: auto;
+    position: relative;
+    align-self: center;
+    margin: 4vh 0;
+    @include breakpoints-up("md") {
+        align-self: flex-start;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        right: 0;
+        background: rgba(74, 246, 205, 1);
+        @include breakpoints-up("lg") {
+        	width: 80px;
+        }
+    }
 }
 
 #location__name{
@@ -35,7 +63,6 @@
     @include titleStyle();
     align-self: flex-end;
     margin-bottom: 20px;
-    // 
 }
 
 .surf__header__shadow{
@@ -43,12 +70,22 @@
 } 
 
 .centre__for__location{
-    position: absolute;
-    top: 60%;
-    right: -6%;
-    rotate: -90deg;
     font-family: $font-name-firaSans;
-    letter-spacing: 10px;
     color: #ffffff;
     opacity: .5;
+    align-self: center;
+    margin: 3vh 0;
+    font-size: 13px;
+    letter-spacing: 5px; 
+    @include breakpoints-up("md"){
+        align-self: flex-start;
+        font-size: 18px;
+        letter-spacing: 10px; 
+    }
+    @include breakpoints-up("lg"){
+        position: absolute;
+        top: 60%;
+        right: -6%;
+        rotate: -90deg;
+    }
 }

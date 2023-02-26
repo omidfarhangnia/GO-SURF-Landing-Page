@@ -277,7 +277,13 @@ $image_size: 169px;
         direction: rtl;
     }
     .surf__title{
-        margin-top: 20vh;
+        margin-top: 4vh;
+        @include breakpoints-up("md"){
+            margin-top: 10vh;
+        }
+        @include breakpoints-up("lg"){
+            margin-top: 20vh;
+        }
     }
     .surf__title--header, .condition__title--header{
         @include titleStyle();
