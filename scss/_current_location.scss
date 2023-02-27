@@ -9,9 +9,9 @@
 }
 
 .world__map__svg{
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin: 5vh 0;
+    margin: 5vh 5%;
 }
 
 .data{
@@ -87,5 +87,15 @@
         top: 60%;
         right: -6%;
         rotate: -90deg;
+    }
+}
+
+.blueCircleContainer{
+    cursor: pointer;
+}
+
+.earth__container{
+    path{
+        opacity: 0.0802455;
     }
 }
