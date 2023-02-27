@@ -276,7 +276,7 @@
                     <div class="centre__for__location">34.0501 N -118.2446 W</div>
                 </div>
                 <svg class="world__map__svg" width="1248" height="635" viewBox="0 0 1248 635" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.0802455">
+    <g class="earth__container">
     <mask id="mask0_0_170" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1241" y="146" width="7" height="6">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M1241.53 146.074H1247.19V151.73H1241.53V146.074Z" fill="white"/>
     </mask>
@@ -2884,32 +2884,41 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M675.5 550.091C675.5 551.653 674.233 552.918 672.671 552.918C671.11 552.918 669.844 551.653 669.844 550.091C669.844 548.53 671.11 547.267 672.671 547.267C674.233 547.267 675.5 548.53 675.5 550.091" fill="white"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M675.5 561.004C675.5 562.567 674.235 563.832 672.671 563.832C671.111 563.832 669.846 562.567 669.846 561.004C669.846 559.444 671.111 558.178 672.671 558.178C674.235 558.178 675.5 559.444 675.5 561.004" fill="white"/>
     </g>
-    <g filter="url(#filter0_d_0_170)">
-    <circle cx="196" cy="302" r="12" fill="#4AF6CD"/>
+    <g class="blueCircleContainer">
+        <circle cx="196" cy="302" r="12" fill="#4AF6CD"/>
+        <circle class="shadowOfCircle" cx="196" cy="302" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter1_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="1149" cy="513" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="1149" cy="513" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter2_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="1079" cy="314" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="1079" cy="314" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter3_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="590" cy="224" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="590" cy="224" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter4_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="858" cy="407" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="858" cy="407" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter5_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="697" cy="567" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="697" cy="567" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter6_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="473" cy="513" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="473" cy="513" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter7_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="398" cy="330" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="398" cy="330" r="0" fill="#4AF6CD"/>
     </g>
-    <g filter="url(#filter8_d_0_170)">
+    <g class="blueCircleContainer">
     <circle cx="47" cy="342" r="12" fill="#4AF6CD"/>
+    <circle class="shadowOfCircle" cx="47" cy="342" r="0" fill="#4AF6CD"/>
     </g>
     <defs>
     <filter id="filter0_d_0_170" x="149" y="255" width="94" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -3092,6 +3101,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/current__location.js"></script>
 </body>
 </html>
