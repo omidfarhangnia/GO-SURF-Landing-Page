@@ -557,7 +557,7 @@ table {
   user-select: none;
 }
 
-.centre__for__location {
+.coordinate__for__location {
   font-family: "Fira Sans";
   color: #ffffff;
   opacity: 0.5;
@@ -567,14 +567,14 @@ table {
   letter-spacing: 5px;
 }
 @media (min-width: 768px) {
-  .centre__for__location {
+  .coordinate__for__location {
     align-self: flex-start;
     font-size: 18px;
     letter-spacing: 10px;
   }
 }
 @media (min-width: 992px) {
-  .centre__for__location {
+  .coordinate__for__location {
     position: absolute;
     top: 60%;
     right: -6%;
