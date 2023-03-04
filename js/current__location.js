@@ -79,3 +79,9 @@ $(".blueCircleContainer").on("click", function() {
     $(".country__name").text(locationData.countryName);
     $(".coordinate__for__location").text(locationData.Coordinate);
 })
+
+$(".blueCircleContainer").on("mouseover", function() {
+    let target = $(this);
+    let locationId = target.attr("location-id");
+    let locationData = surfLocations[locationId];
+})

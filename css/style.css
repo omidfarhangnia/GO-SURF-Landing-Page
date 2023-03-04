@@ -589,3 +589,8 @@ table {
 .earth__container path {
   opacity: 0.0802455;
 }
+
+.view__surf {
+  width: 100%;
+  height: 100vh;
+}
