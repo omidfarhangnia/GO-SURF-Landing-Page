@@ -422,10 +422,12 @@ table {
   min-width: 500px;
 }
 
-.current__location {
+.main {
   background-image: url("../image/surf-background-image.png");
   background-color: #222532;
-  width: 100%;
+}
+
+.current__location {
   position: relative;
 }
 @media (min-width: 992px) {
@@ -592,5 +594,136 @@ table {
 
 .view__surf {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
+}
+
+.cards__container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.cards {
+  position: absolute;
+  width: 30vw;
+  height: 90%;
+  padding: 5%;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #404040;
+  background-blend-mode: soft-light;
+  transition: 0.6s ease-in-out;
+  user-select: none;
+  display: grid;
+  grid-template-rows: 120% 0;
+  overflow: hidden;
+}
+.cards:hover {
+  background-color: transparent !important;
+  grid-template-rows: 90% 6rem;
+  z-index: 5;
+}
+.cards:nth-child(odd) {
+  top: 0;
+}
+.cards:nth-child(even) {
+  bottom: 0;
+}
+.cards__num__0 {
+  right: 0;
+  z-index: 4;
+}
+.cards__num__1 {
+  right: 25vw;
+  z-index: 3;
+}
+.cards__num__2 {
+  right: 50vw;
+  z-index: 2;
+}
+.cards__num__3 {
+  left: 0;
+  z-index: 1;
+}
+.cards .location__place {
+  font-family: "Fira Sans";
+  color: #ffffff;
+  align-self: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+@media (min-width: 768px) {
+  .cards .location__place {
+    align-self: flex-start;
+    font-size: 18px;
+    letter-spacing: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .cards .location__place {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    rotate: -90deg;
+  }
+}
+.cards .surf__button {
+  text-decoration: none;
+  align-self: center;
+  font-family: "Fira Sans";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 40px;
+}
+.cards .surf__button button {
+  all: unset;
+}
+.cards .surf__button button span {
+  display: inline-block;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.cards .surf__button button .surf__button--surf {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: #4AF6CD;
+  position: relative;
+}
+.cards .surf__button button .surf__button--surf::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 1px;
+  top: 50%;
+  background: #ffffff;
+}
+
+.location__name {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Fira Sans";
+  font-weight: 900;
+  margin-right: 10vw;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  width: 50%;
+}
+@media (min-width: 992px) {
+  .location__name {
+    font-size: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .location__name {
+    font-size: 50px;
+  }
 }

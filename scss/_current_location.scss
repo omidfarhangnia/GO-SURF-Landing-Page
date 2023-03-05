@@ -1,7 +1,9 @@
-.current__location{
+.main{
     background-image: url("../image/surf-background-image.png");
     background-color: #222532;
-    width: 100%;
+}
+
+.current__location{
     position: relative;
     @include breakpoints-up("lg"){
         padding-bottom: 20vh;
