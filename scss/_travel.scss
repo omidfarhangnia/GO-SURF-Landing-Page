@@ -1,0 +1,13 @@
+.travel{
+    padding: 5vh 5vw;
+    min-height: 100vh;
+}
+
+.travel__header{
+    @include sectionHeaders();
+    @include headerSize1();
+}
+
+.travel__header__shadow{
+    @include headersShadow(200px, 13vh, -4vw);
+}
