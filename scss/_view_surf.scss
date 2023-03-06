@@ -27,11 +27,11 @@
     display: grid;
     grid-template-rows: 120% 0;
     overflow: hidden;
-    &:hover{
-        background-color: transparent !important;
-        grid-template-rows: 90% 6rem;
-        z-index: 5;
-    }
+    // &:hover{
+    //     background-color: transparent !important;
+    //     grid-template-rows: 90% 6rem;
+    //     z-index: 5;
+    // }
     &:nth-child(odd){
         top: 0;
     }

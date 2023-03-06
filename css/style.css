@@ -622,11 +622,6 @@ table {
   grid-template-rows: 120% 0;
   overflow: hidden;
 }
-.cards:hover {
-  background-color: transparent !important;
-  grid-template-rows: 90% 6rem;
-  z-index: 5;
-}
 .cards:nth-child(odd) {
   top: 0;
 }
