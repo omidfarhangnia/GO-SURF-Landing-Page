@@ -47,25 +47,38 @@ function ShowLocation({ location, index }) {
             className={"cards cards__num__" + index} 
             style={locationStyle}
             onMouseLeave={(e) => {
-                const tl = gsap.timeline();
-                tl
-                .to(e.target, {
-                    opacity: 0,
-                    duration: .3,
-                })
-                .set(e.target, {zIndex: 4 - index})
-                .to(e.target, {
-                    opacity: 1,
-                    duration: .3
-                }, '+=.5')
+                // let mainCard = $( e.target ).parents( "div.cards" );
+                // const tl = gsap.timeline();
+                // tl
+                // .to(mainCard, {
+                //     opacity: 0,
+                //     duration: .3,
+                // })
+                // .set(mainCard, {
+                //     backgroundColor: "#404040",
+                //     gridTemplateRows: "120% 0",
+                //     zIndex: 4 - index,
+                // })
+                // .to(mainCard, {
+                //     opacity: 1,
+                //     duration: .3
+                // }, '+=.5')
             }}
             onMouseEnter={(e) => {
-                gsap.to(e.target, {
-                    backgroundColor: "transparent",
-                    gridTemplateRows: "90% 6rem",
-                    zIndex: 5,
-                    duration: .6
-                })
+                // let mainCard = $( e.target ).parents( ".cards" );
+                // const tl = gsap.timeline();
+                // tl
+                // .to(mainCard, {
+                //     backgroundColor: "transparent",
+                //     duration: .6
+                // }, "mouseEnterLabel")
+                // .to(mainCard, {
+                //     gridTemplateRows: "90% 6rem",
+                //     duration: .6
+                // }, "mouseEnterLabel")
+                // .set(mainCard, {
+                //     zIndex: 5,
+                // })
             }}
         >
             <h3 className={"location__name"}>{location.name}</h3>
