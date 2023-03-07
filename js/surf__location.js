@@ -82,7 +82,7 @@ function ShowLocation({ location, index }) {
             }}
         >
             <h3 className={"location__name"}>{location.name}</h3>
-            <p className={"location__place"}>{location.location.city} | {location.location.country}</p>
+            <p className={"location__place"}>{`${location.location.city} | ${location.location.country}`}</p>
             <a href={"#"} className={"surf__button"}>
                 <button>
                     <span className="surf__button--view">
