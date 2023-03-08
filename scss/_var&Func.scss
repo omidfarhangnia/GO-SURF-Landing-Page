@@ -47,7 +47,7 @@ $breakpoints-down: ("sm": "575px", "md": "767px", "lg": "991px", "xl": "1199px",
 	}
 }
 
-@mixin titleStyle() {
+@mixin titleStyle($isLeft: true) {
 	font-size: 17px;
 	letter-spacing: 4px;
 	color: #979797;
@@ -70,10 +70,18 @@ $breakpoints-down: ("sm": "575px", "md": "767px", "lg": "991px", "xl": "1199px",
 		height: 2px;
 		background: #979797;
 		top: calc(50% - 2px);
-		left: -80px;
+		@if($isLeft){
+            left: -80px;
+		} @else {
+			margin-left: 10px;
+		}
 		@include breakpoints-up("lg") {
 			width: 90px;
-			left: -110px;
+			@if($isLeft){
+				left: -110px;
+			}@else{
+				margin-left: 30px;
+			}
 		}
 	}
 }
@@ -108,7 +116,7 @@ $breakpoints-down: ("sm": "575px", "md": "767px", "lg": "991px", "xl": "1199px",
         position: absolute;
         width: 40px;
         height: 2px;
-        right: 0;
+        right: 10%;
         background: rgba(74, 246, 205, 1);
         @include breakpoints-up("lg") {
         	width: 80px;

@@ -112,3 +112,22 @@ function AddCards() {
 const rootNode = document.getElementById('surf-locations');
 const root = ReactDOM.createRoot(rootNode);
 root.render(React.createElement(AddCards));
+
+
+$(
+    function() {
+        gsap.to(".airline__pt--airplaneImage", {
+            x: "-=300vw",
+            duration: 3,
+            ease: "linear",
+            rotate: 10,
+            y: -300,
+            scrollTrigger: {
+                trigger: ".airline__pt--airplaneImage",
+                start: "top 70%",
+                end: "200% 40%",
+                scrub: .8,
+            }
+        })
+    }
+)

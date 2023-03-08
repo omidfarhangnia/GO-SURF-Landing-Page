@@ -487,7 +487,7 @@ table {
   position: absolute;
   width: 40px;
   height: 2px;
-  right: 0;
+  right: 10%;
   background: rgb(74, 246, 205);
 }
 @media (min-width: 992px) {
@@ -594,7 +594,11 @@ table {
 
 .view__surf {
   width: 100%;
-  height: 120vh;
+}
+@media (min-width: 768px) {
+  .view__surf {
+    height: 120vh;
+  }
 }
 
 .cards__container {
@@ -758,11 +762,13 @@ table {
 }
 
 .travel {
-  padding: 5vh 5vw;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .travel__header {
+  padding: 5vh 5vw;
   display: inline-block;
   width: auto;
   position: relative;
@@ -786,7 +792,7 @@ table {
   position: absolute;
   width: 40px;
   height: 2px;
-  right: 0;
+  right: 10%;
   background: rgb(74, 246, 205);
 }
 @media (min-width: 992px) {
@@ -812,4 +818,158 @@ table {
   text-transform: uppercase;
   font-weight: 900;
   user-select: none;
+}
+
+.travel__pt__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.travel__pt--header {
+  font-size: 17px;
+  letter-spacing: 4px;
+  color: #979797;
+  font-family: "Fira Sans";
+  margin-right: 10vw;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .travel__pt--header {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .travel__pt--header {
+    font-size: 30px;
+  }
+}
+.travel__pt--header::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: #979797;
+  top: calc(50% - 2px);
+  left: -80px;
+}
+@media (min-width: 992px) {
+  .travel__pt--header::after {
+    width: 90px;
+    left: -110px;
+  }
+}
+
+.travel__pt--location {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Fira Sans";
+  font-weight: 900;
+  margin-right: 10vw;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .travel__pt--location {
+    font-size: 80px;
+  }
+}
+
+.travel__pt--image {
+  overflow: hidden;
+}
+.travel__pt--image img {
+  width: 100%;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .travel__pt--image {
+    width: 70%;
+    align-self: flex-start;
+    margin: -5% 0 -10%;
+  }
+}
+
+.airline__pt {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.airline__pt--text {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 30px 40px;
+}
+.airline__pt--text .airline__pt--header {
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 4px;
+  color: #979797;
+  font-family: "Fira Sans";
+  margin-right: 10vw;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .airline__pt--text .airline__pt--header {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .airline__pt--text .airline__pt--header {
+    font-size: 30px;
+  }
+}
+.airline__pt--text .airline__pt--header::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: #979797;
+  top: calc(50% - 2px);
+  margin-left: 10px;
+}
+@media (min-width: 992px) {
+  .airline__pt--text .airline__pt--header::after {
+    width: 90px;
+    margin-left: 30px;
+  }
+}
+.airline__pt--text .airline__pt--location {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Fira Sans";
+  font-weight: 900;
+  margin-right: 10vw;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 20px 0;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .airline__pt--text .airline__pt--location {
+    font-size: 80px;
+  }
+}
+
+.airline__pt--airplaneImage {
+  width: 100vw;
+  position: absolute;
+  bottom: 20%;
+  left: 100%;
+}
+.airline__pt--airplaneImage img {
+  object-fit: contain;
 }

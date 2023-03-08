@@ -1,13 +1,79 @@
 .travel{
-    padding: 5vh 5vw;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .travel__header{
+    padding: 5vh 5vw;
     @include sectionHeaders();
     @include headerSize1();
 }
 
 .travel__header__shadow{
     @include headersShadow(200px, 13vh, -4vw);
+}
+
+.travel__pt__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.travel__pt--header{ 
+    @include titleStyle();
+}
+
+.travel__pt--location{
+    @include headerSize1();
+}
+
+.travel__pt--image{
+    overflow: hidden;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+    @include breakpoints-up("md") {
+        width: 70%;
+        align-self: flex-start;
+        margin: -5% 0 -10%;
+    }
+}
+
+.airline__pt{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.airline__pt--text{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 30px 40px;
+    .airline__pt--header{
+        width: 100%;
+        @include titleStyle($isLeft: false);
+    }
+    .airline__pt--location{
+        @include headerSize1();
+        font-size: 30px;
+        margin: 20px 0;
+        width: auto;
+    }
+}
+
+.airline__pt--airplaneImage{
+    width: 100vw;
+    position: absolute;
+    bottom: 20%;
+    left: 100%;
+    img{
+        object-fit: contain;
+    }
 }

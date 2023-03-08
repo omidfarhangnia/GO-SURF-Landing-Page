@@ -1,6 +1,8 @@
 .view__surf{
     width: 100%;
-    height: 120vh;
+    @include breakpoints-up("md") {
+        height: 120vh;
+    }
 }
 
 .cards__container{
