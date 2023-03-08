@@ -42,44 +42,46 @@ function ShowLocation({ location, index }) {
         backgroundImage: "url(" + location.imageUrl + ")",
     }
 
+    function handleClick(card) {
+        const tl = gsap.timeline();
+        tl
+        .to(card, {
+            backgroundColor: "transparent",
+            duration: .6
+        }, "mouseEnterLabel")
+        .to(card, {
+            gridTemplateRows: "90% 6rem",
+            duration: .6
+        }, "mouseEnterLabel")
+        .set(card, {
+            zIndex: 5,
+        }) 
+    }
+
+    function handleMouseleave(card) {
+        const tl = gsap.timeline();
+        tl
+        .to(card, {
+            opacity: 0,
+            duration: .3,
+        })
+        .set(card, {
+            backgroundColor: "#404040",
+            gridTemplateRows: "120% 0",
+            zIndex: 4 - index,
+        })
+        .to(card, {
+            opacity: 1,
+            duration: .3
+        }, '+=.5')
+    }
+
     return(
         <div 
             className={"cards cards__num__" + index} 
             style={locationStyle}
-            onMouseLeave={(e) => {
-                // let mainCard = $( e.target ).parents( "div.cards" );
-                // const tl = gsap.timeline();
-                // tl
-                // .to(mainCard, {
-                //     opacity: 0,
-                //     duration: .3,
-                // })
-                // .set(mainCard, {
-                //     backgroundColor: "#404040",
-                //     gridTemplateRows: "120% 0",
-                //     zIndex: 4 - index,
-                // })
-                // .to(mainCard, {
-                //     opacity: 1,
-                //     duration: .3
-                // }, '+=.5')
-            }}
-            onMouseEnter={(e) => {
-                // let mainCard = $( e.target ).parents( ".cards" );
-                // const tl = gsap.timeline();
-                // tl
-                // .to(mainCard, {
-                //     backgroundColor: "transparent",
-                //     duration: .6
-                // }, "mouseEnterLabel")
-                // .to(mainCard, {
-                //     gridTemplateRows: "90% 6rem",
-                //     duration: .6
-                // }, "mouseEnterLabel")
-                // .set(mainCard, {
-                //     zIndex: 5,
-                // })
-            }}
+            onMouseLeave={(e) => {handleMouseleave(e.target)}}
+            onClick={(e) => {handleClick(e.target)}}
         >
             <h3 className={"location__name"}>{location.name}</h3>
             <p className={"location__place"}>{`${location.location.city} | ${location.location.country}`}</p>
@@ -108,7 +110,6 @@ function AddCards() {
     );
 }
 
-
 const rootNode = document.getElementById('surf-locations');
 const root = ReactDOM.createRoot(rootNode);
 root.render(React.createElement(AddCards));
@@ -129,5 +130,51 @@ $(
                 scrub: .8,
             }
         })
+        $(". ").on("click", () => {
+            mouseEnterTl.play();
+        })
+        const mouseEnterTl = gsap.timeline({ paused: true});
+        mouseEnterTl.to(".cards__num__0", {
+            backgroundColor: "transparent",
+            gridTemplateRows: "90% 6rem",
+            duration: .6,
+        })
+        mouseEnterTl.set(".cards__num__0", {
+            zIndex: 5,
+        })
     }
 )
+
+
+
+                // let mainCard = $( e.target ).parents( "div.cards" );
+                // const tl = gsap.timeline();
+                // tl
+                // .to(mainCard, {
+                //     opacity: 0,
+                //     duration: .3,
+                // })
+                // .set(mainCard, {
+                //     backgroundColor: "#404040",
+                //     gridTemplateRows: "120% 0",
+                //     zIndex: 4 - index,
+                // })
+                // .to(mainCard, {
+                //     opacity: 1,
+                //     duration: .3
+                // }, '+=.5')
+
+                // let mainCard = $( e.target ).parents( ".cards" );
+                // const tl = gsap.timeline();
+                // tl
+                // .to(mainCard, {
+                //     backgroundColor: "transparent",
+                //     duration: .6
+                // }, "mouseEnterLabel")
+                // .to(mainCard, {
+                //     gridTemplateRows: "90% 6rem",
+                //     duration: .6
+                // }, "mouseEnterLabel")
+                // .set(mainCard, {
+                //     zIndex: 5,
+                // })

@@ -628,11 +628,7 @@ table {
   justify-content: space-around;
   user-select: none;
   overflow: hidden;
-}
-.cards:hover {
-  background-color: transparent !important;
-  grid-template-rows: 90% 6rem;
-  z-index: 5;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .cards {
