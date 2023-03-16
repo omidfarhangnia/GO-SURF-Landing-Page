@@ -87,10 +87,10 @@ function ShowLocation({ location, index }) {
             <p className={"location__place"}>{`${location.location.city} | ${location.location.country}`}</p>
             <a href={"#"} className={"surf__button"}>
                 <button>
-                    <span className="surf__button--view">
+                    <span className="buttonGrayPart">
                         view
                     </span>
-                    <span className="surf__button--surf">
+                    <span className="buttonBluePart">
                         surf
                         <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.3688 19.5872L23.5824 11.4365C24.3348 10.6853 24.3348 9.46609 23.5824 8.71746L15.3688 0.561846C14.6101 -0.189295 13.3821 -0.185526 12.6234 0.561846C11.8723 1.31424 11.8723 2.52844 12.6234 3.28084L17.4285 8.04826L2.01437 8.04826C0.900866 8.04826 -1.90735e-05 8.94789 -1.90735e-05 10.0614C-1.90735e-05 11.1736 0.900866 12.0745 2.01437 12.0745L17.4575 12.0745L12.6234 16.8671C11.8723 17.6182 11.8723 18.8337 12.6234 19.5848C13.3809 20.3372 14.6089 20.3385 15.3688 19.5873V19.5872Z" fill="white"/>
@@ -130,7 +130,7 @@ $(
                 scrub: .8,
             }
         })
-        $(". ").on("click", () => {
+        $(".cards__num__0").on("click", () => {
             mouseEnterTl.play();
         })
         const mouseEnterTl = gsap.timeline({ paused: true});
@@ -144,37 +144,3 @@ $(
         })
     }
 )
-
-
-
-                // let mainCard = $( e.target ).parents( "div.cards" );
-                // const tl = gsap.timeline();
-                // tl
-                // .to(mainCard, {
-                //     opacity: 0,
-                //     duration: .3,
-                // })
-                // .set(mainCard, {
-                //     backgroundColor: "#404040",
-                //     gridTemplateRows: "120% 0",
-                //     zIndex: 4 - index,
-                // })
-                // .to(mainCard, {
-                //     opacity: 1,
-                //     duration: .3
-                // }, '+=.5')
-
-                // let mainCard = $( e.target ).parents( ".cards" );
-                // const tl = gsap.timeline();
-                // tl
-                // .to(mainCard, {
-                //     backgroundColor: "transparent",
-                //     duration: .6
-                // }, "mouseEnterLabel")
-                // .to(mainCard, {
-                //     gridTemplateRows: "90% 6rem",
-                //     duration: .6
-                // }, "mouseEnterLabel")
-                // .set(mainCard, {
-                //     zIndex: 5,
-                // })
