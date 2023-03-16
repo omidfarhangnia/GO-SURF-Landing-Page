@@ -86,51 +86,51 @@
             rotate: 180deg;
         }
     }
+}
 
-    .surf__button{
-        text-decoration: none;
-        align-self: center;
-        font-family: $font-name-firaSans;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        color: #ffffff;
-        font-weight: 900;
-        font-size: 20px;
-        margin-top: 30px;
-        z-index: 1;
-        @include breakpoints-up("md") {
-            font-size: 40px;
-            margin-top: 0;
-        }
-        button{
-            all: unset;
-            span{
-                display: inline-block;
-                padding: 15px;
-                text-transform: uppercase;
-            }
-            .surf__button--surf{
-                display: inline-flex;
-                align-items: center;
-                gap: 20px;
-                background: #4AF6CD;
-                position: relative;
-                &::after{
-                    $lineWidth: 20px;
-                    content: "";
-                    position: absolute;
-                    left: calc($lineWidth / 2 * -1);
-                    width: $lineWidth;
-                    height: 1px;
-                    top: 50%;
-                    background: #ffffff;
-                }
-            }
+.surf__button{
+    text-decoration: none;
+    align-self: center;
+    font-family: $font-name-firaSans;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 30px;
+    z-index: 1;
+    @include breakpoints-up("md") {
+        font-size: 40px;
+        margin-top: 0;
+    }
+    button{
+        all: unset;
+        span{
+            display: inline-block;
+            padding: 15px;
+            text-transform: uppercase;
         }
     }
 }
 
+.buttonBluePart{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background: #4AF6CD !important;
+    position: relative;
+    &::after{
+        $lineWidth: 20px;
+        content: "";
+        position: absolute;
+        left: calc($lineWidth / 2 * -1);
+        width: $lineWidth;
+        height: 1px;
+        top: 50%;
+        background: #ffffff;
+    }
+}
 
 .location__name{
     @include headerSize1();

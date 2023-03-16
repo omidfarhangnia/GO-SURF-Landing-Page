@@ -71,9 +71,105 @@
 .airline__pt--airplaneImage{
     width: 100vw;
     position: absolute;
-    bottom: 20%;
+    bottom: 45%;
     left: 100%;
+    @include breakpoints-up("md") {
+        bottom: 35%;
+    }
     img{
         object-fit: contain;
+    }
+}
+
+.travel__book__flight{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    gap: 2rem;
+    .title{
+        color: #979797;
+        font-size: 1.1rem;
+        display: block;
+        text-transform: uppercase;
+        font-family: $font-name-firaSans;
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+    .subtitle{
+        color: #979797;
+        font-family: $font-name-firaSans;
+        font-size: .7rem;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-top: 5px;
+        word-spacing: 3px;
+    }
+    .heading{
+        font-size: 1.5rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: $font-name-firaSans;
+        font-weight: 900;
+        text-align: center;
+    }
+    @include breakpoints-up("md") {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: space-between;
+        margin: 10% 0 20% 0;
+        > div{
+            width: 23%;
+            margin: 0;
+            display: flex;
+        }
+        .title{
+            writing-mode: vertical-lr;
+            rotate: 180deg;
+            text-align: end;
+            margin-right: 10px;
+        }
+        .heading, .priceContainer{
+            font-size: 1.7rem;
+            width: 100%;
+        }
+        .priceContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .subtitle{
+            text-align: end;
+        }
+        .bookLink{
+            margin-top: 3rem;
+            width: 100%;
+        }
+    }
+    @include breakpoints-up('lg'){
+        .subtitle{
+            font-size: 1.2rem;
+        }
+        .heading{
+            font-size: 2.6rem;
+            margin-top: 20px;
+        }
+        .title{
+            letter-spacing: 15px;
+        }
+    }
+}
+
+.glass__of__drinking{
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 1 / 2;
+    bottom: 0%;
+    max-width: 360px;
+    right: 0;
+    @include breakpoints-up("lg"){
+        bottom: -5%;
     }
 }
